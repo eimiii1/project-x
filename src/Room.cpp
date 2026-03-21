@@ -16,3 +16,12 @@ void Room::showInfo() {
     }
     cout << "Tenants: \n" << showTenants() << "\n";
 }
+
+string Room::showTenants() {
+    TenantNode* current = head;
+
+    while (current != nullptr) {
+        current->data.showTenantInfo();
+        current = current->next;
+    }
+}

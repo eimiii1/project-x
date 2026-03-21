@@ -1,20 +1,21 @@
 #pragma once
 #include <iostream>
+using namespace std;
 
 class Tenant {
 private:
-    std::string name;
-    std::string contact;
-    std::string moveInDate;
+    string name;
+    string contact;
+    string moveInDate;
     int roomNumber;
     double balance;
 
 public:
-    Tenant(std::string name, std::string contact, std::string moveInDate, int roomNumber, double balance);
+    Tenant(string name, string contact, string moveInDate, int roomNumber, double balance);
 
-    std::string getName() {return name;}
-    std::string getContact() {return contact;}
-    std::string getMoveInDate() {return moveInDate;}
+    string getName() {return name;}
+    string getContact() {return contact;}
+    string getMoveInDate() {return moveInDate;}
     int getRoomNumber() {return roomNumber;}
     double getBalance() {return balance;}
         
