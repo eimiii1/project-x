@@ -1,30 +1,41 @@
-# Boarding House Management System
+# Project-X: C++ Case Studies
 
-A case study implementing a console-based management system for boarding houses built in C++. Designed to manage rooms, tenants, and payments with a focus on OOP principles and data structures.
+A collection of 5 comprehensive C++ systems exploring different architectural and programming concepts.
 
-## Features
+## Systems
 
-- Room management with availability tracking
-- Tenant management using a linked list implementation
-- Payment tracking with balance carry-over and penalty system
-- Boarding house overview with room and tenant records
+### System 1: [Boarding House Management]
+- **Branch:** `system-1/`
+- **Description:** [A management system designed to manage rooms, tenants and payments with a focus on OOP principles and data structures.]
 
-## Tech Stack
-
-- C++17
-- OOP (classes, encapsulation)
-- Linked list (custom implementation)
-- File handling (coming soon)
-
-## Project Structure
-```
-project-x/
-├── include/     # Header files
-├── src/         # Source files
-├── build/       # Compiled output
-└── build.bat    # Build script
+### How to Run
+Run the following command existing in the root folder:
+```bash
+./build.bat
 ```
 
-## Status
+Or create your own batch file:
+```batch
+@echo off
+REM build script
 
-In development.
+REM create folder if not exist 
+if not exist build (
+    mkdir build
+)
+
+REM compile all cpp files
+g++ src\main.cpp src\BoardingHouse.cpp src\Room.cpp src\Tenant.cpp -Iinclude -o build\manager.exe
+
+REM check if compilation succeeded
+if &ERRORLEVEL& == 0 (
+    echo Compilation Successful!
+    echo Running program...
+    build\manager.exe 
+) else (
+    echo Compilation failed!
+)
+
+echo. 
+pause
+```
